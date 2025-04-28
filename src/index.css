@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --forest-green: #2F4F3A;
+  --olive-gold: #A18A42;
+        /* Secondary */
+  --ivory-white: #F5F1E9;
+  --soft-sage: #C9D3C0;
+  --stone-gray: #787878;
+        /* Accents */
+  --muted-teal: #5B7C78;
+  --dusty-rose: #D7A7A1;
+}
+:root {
+  --text-scale: 1;
+}
+
+
+
+@media (max-width: 1120px) {
+  .desktop-menu { display: none; }
+  .mobile-menu-button { display: block; }
+}
