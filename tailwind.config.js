@@ -29,5 +29,6 @@ export default {
     },
   },
   plugins: [],
+  base:"/hair-transplant-app"
 }
 

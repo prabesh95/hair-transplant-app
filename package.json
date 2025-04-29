@@ -1,13 +1,17 @@
 {
   "name": "regrowe-hairt-transplant",
+  "homepage":"https://prabesh95.github.io/hair-transplant-app/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npx vite build",
+    "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d dist"
+  
   },
   "dependencies": {
     "aos": "^2.3.4",
