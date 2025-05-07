@@ -79,7 +79,7 @@ const WrittenTestimonials = () => {
 
   return (
     <div className="relative max-w-7xl mx-auto px-4 py-8">
-      <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 text-gray-800">Client Feedback</h2>
+      <h2 className="heading-h2 font-bold text-center mb-8 text-gray-800">Client Feedback</h2>
       
       <div className="relative" ref={containerRef}>
         <div className="overflow-hidden">
@@ -97,11 +97,11 @@ const WrittenTestimonials = () => {
                 style={{ width: `${itemWidth}px` }}
               >
                 <div className="bg-white rounded-lg shadow h-full p-6 flex flex-col">
-                  <div className="text-2xl mb-4 text-center">
+                  <div className=" mb-4 text-center">
                     {renderStars(testimonial.rating)}
                   </div>
-                  <p className="text-gray-600 italic mb-6 text-lg flex-grow">"{testimonial.text}"</p>
-                  <p className="font-semibold text-gray-800 text-center">{testimonial.author}</p>
+                  <p className="text-body italic mb-6 text-lg flex-grow">"{testimonial.text}"</p>
+                  <p className="text-body  font-semibold text-gray-800 text-center">{testimonial.author}</p>
                 </div>
               </div>
             ))}

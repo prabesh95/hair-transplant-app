@@ -30,17 +30,17 @@ const WarningSigns = () => {
       {warnings.map((warning, index) => (
         <div key={index} className="flex items-start">
           <div className="bg-red-50 p-2 rounded-full mr-4">
-            <AlertTriangle className="text-red-500" size={18} />
+            <AlertTriangle className="text-red-500 heading-h3" size={18} />
           </div>
           <div>
-            <h3 className="font-semibold text-red-600">{warning.symptom}</h3>
-            <p className="text-sm text-stone-500">{warning.action}</p>
+            <h4 className="font-semibold text-red-600 heading-h4">{warning.symptom}</h4>
+            <p className="text-body text-stone-500">{warning.action}</p>
           </div>
         </div>
       ))}
       <div className="mt-4 p-3 bg-yellow-50 rounded-lg border border-yellow-200">
-        <p className="text-sm text-yellow-700">
-          <span className="font-medium">Emergency Contact:</span> Call +977 (98) 123-4567 for any urgent concerns
+        <p className="font-medium  text-yellow-700">
+          <span className="text-body">Emergency Contact:</span > Call +977 (98) 123-4567 for any urgent concerns
         </p>
       </div>
     </div>

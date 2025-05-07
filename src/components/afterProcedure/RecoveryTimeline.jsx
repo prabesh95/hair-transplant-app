@@ -18,11 +18,11 @@ const RecoveryTimeline = () => {
       {milestones.map((milestone, index) => (
         <div key={index} className="flex items-start">
           <div className="bg-soft-sage/20 p-2 rounded-full mr-4">
-            <Calendar className="text-olive-gold" size={18} />
+            <Calendar className="text-olive-gold heading-h3"  />
           </div>
           <div>
-            <h3 className="font-semibold text-forest-green">{milestone.period}</h3>
-            <p className="text-sm text-stone-500">{milestone.details}</p>
+            <h4 className="font-semibold text-forest-green heading-h4">{milestone.period}</h4>
+            <p className=" text-stone-500 text-body">{milestone.details}</p>
           </div>
         </div>
       ))}

@@ -43,3 +43,39 @@ export const hairTransplantTechniques = [
     color: "forest-green",
   },
 ];
+export const regroweData={
+  email: "contact@regrowe.com",
+  phone: "09383832839",
+  location: {
+    address: "123 Medical Center Drive",
+    street :"Beverly Hills, CA 90210"
+  },
+  facebookLink:"",
+  instagramLink:"",
+  twitwerLink: "",
+  clientDetails:
+  [{
+    name: "Anil Adhakari",
+    beforePhoto: "",
+    AfterPhoto: "",
+    },
+    {
+      name: "Roshan Adhakari",
+      beforePhoto: "",
+      AfterPhoto: "",
+    },
+    {
+      name: "Bashanta Pokheral",
+      beforePhoto: "",
+      AfterPhoto: "",
+     },
+     {
+      name: "Roshan Poudel",
+      beforePhoto: "",
+      AfterPhoto: "",
+     },
+  ],
+  videoTestimonials:["video1","video2","video3"]
+  
+
+}

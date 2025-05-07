@@ -15,15 +15,15 @@ const ProcedureTimeline = () => {
     <div className="space-y-4">
       {stages.map((stage, index) => (
         <div key={index} className="flex items-start">
-          <div className="bg-soft-sage/20 p-2 rounded-full mr-4">
+          <div className="bg-soft-sage/20 p-2 rounded-full mr-4 text-body">
             <Clock className="text-olive-gold" size={18} />
           </div>
           <div>
             <div className="flex items-baseline">
-              <span className="font-medium text-forest-green mr-2">{stage.time}</span>
-              <span className="font-semibold text-stone-700">{stage.title}</span>
+              <span className="font-medium text-forest-green mr-2 text-body">{stage.time}</span>
+              <span className="font-semibold text-stone-700 text-body">{stage.title}</span>
             </div>
-            <p className="text-sm text-stone-500">{stage.description}</p>
+            <p className="text-body text-stone-500">{stage.description}</p>
           </div>
         </div>
       ))}

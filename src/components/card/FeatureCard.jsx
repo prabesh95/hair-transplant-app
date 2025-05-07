@@ -19,11 +19,11 @@ const FeatureCard = () => {
 
   return (
     <div id="dht-technique" className='my-12 min-h-screen py-12'>
-      <h2 className="text-3xl md:text-4xl font-bold text-forest-green mb-4 text-center ">
+      <h2 className="heading-h2 font-bold text-forest-green mb-4 text-center ">
     Direct Hair Transplant (DHT) <br/> The Gold Standard in Hair Restoration
   </h2>
   <div className="w-20 h-1 bg-olive-gold mx-auto mt-4 "></div>
-    <div className="max-w-7xl mx-auto   sm:p-3">
+    <div className="max-w-7xl mx-auto sm:p-3 lg:px-0">
       <div className=" flex flex-col lg:flex-row-reverse"> {/* Changed to flex-row-reverse */}
         
         {/* Image - Top on mobile, Left on desktop */}
@@ -39,7 +39,7 @@ const FeatureCard = () => {
         <div className="lg:w-1/2 p-4 md:p-6 lg:p-8 ">
           
           
-          <p className="text-stone-gray mb-6 text-base md:text-lg">
+          <p className="text-stone-gray mb-6 text-base text-body">
             Direct Hair Transplant (DHT) is the most advanced and refined method of hair transplantation, offering superior results compared to traditional techniques like Follicular Unit Extraction (FUE) and Follicular Unit Transplantation (FUT). DHT is a modified and optimized version of FUE, designed to maximize graft survival and ensure natural-looking, dense hair growth.
           </p>
 
@@ -49,7 +49,7 @@ const FeatureCard = () => {
               className="flex items-center justify-between w-full text-left"
               onClick={() => toggleSection('howItWorks')}
             >
-              <h3 className="text-xl font-semibold text-forest-green">How Does DHT Work?</h3>
+              <h4 className="heading-h4 font-semibold text-forest-green">How Does DHT Work?</h4>
               {expandedSections.howItWorks ? (
                 <Minus  className="text-olive-gold" size={24} />
               ) : (
@@ -60,20 +60,20 @@ const FeatureCard = () => {
             {expandedSections.howItWorks && (
               <ul className="space-y-3 mt-3 text-base">
                 <li className="flex items-start">
-                  <span className="text-olive-gold mr-2">•</span>
-                  <span className="text-stone-gray"><strong>Recipient Site Creation</strong> – Tiny, precise slits are made in the bald or thinning areas of the scalp before extracting grafts.</span>
+                  <span className="text-olive-gold mr-2 text-body">•</span>
+                  <span className="text-stone-gray text-body"><strong>Recipient Site Creation</strong> – Tiny, precise slits are made in the bald or thinning areas of the scalp before extracting grafts.</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-olive-gold mr-2">•</span>
-                  <span className="text-stone-gray"><strong>Graft Extraction</strong> – Hair follicles are carefully harvested from the donor area (usually the back or sides of the head) using a micro-punch tool.</span>
+                  <span className="text-olive-gold mr-2 text-body">•</span>
+                  <span className="text-stone-gray text-body"><strong>Graft Extraction</strong> – Hair follicles are carefully harvested from the donor area (usually the back or sides of the head) using a micro-punch tool.</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-olive-gold mr-2">•</span>
-                  <span className="text-stone-gray"><strong>Immediate Transplantation</strong> – Unlike traditional methods where grafts are stored outside the body, DHT transplants the follicles within minutes (2-20 minutes) of extraction, minimizing exposure and damage.</span>
+                  <span className="text-olive-gold mr-2 text-body">•</span>
+                  <span className="text-stone-gray text-body"><strong>Immediate Transplantation</strong> – Unlike traditional methods where grafts are stored outside the body, DHT transplants the follicles within minutes (2-20 minutes) of extraction, minimizing exposure and damage.</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-olive-gold mr-2">•</span>
-                  <span className="text-stone-gray"><strong>Natural Angle & Direction</strong> – The pre-made slits ensure that each graft is placed at the correct angle and direction, mimicking natural hair growth.</span>
+                  <span className="text-olive-gold mr-2 text-body">•</span>
+                  <span className="text-stone-gray text-body"><strong>Natural Angle & Direction</strong> – The pre-made slits ensure that each graft is placed at the correct angle and direction, mimicking natural hair growth.</span>
                 </li>
               </ul>
             )}
@@ -85,7 +85,7 @@ const FeatureCard = () => {
               className="flex items-center justify-between w-full text-left"
               onClick={() => toggleSection('advantages')}
             >
-              <h3 className="text-xl font-semibold text-forest-green">Advantages of DHT Over Other Techniques</h3>
+              <h4 className="heading-h4 font-semibold text-forest-green">Advantages of DHT Over Other Techniques</h4>
               {expandedSections.advantages ? (
                 <Minus className="text-olive-gold" size={24} />
               ) : (
@@ -96,24 +96,24 @@ const FeatureCard = () => {
             {expandedSections.advantages && (
               <ul className="space-y-2 mt-3">
                 <li className="flex items-start">
-                  <span className="text-olive-gold mr-2">✔</span>
-                  <span className="text-stone-gray"><strong>Near 100% Graft Survival</strong> – Since grafts are transplanted immediately, they remain healthy and intact, leading to higher success rates.</span>
+                  <span className="text-olive-gold mr-2 text-body">✔</span>
+                  <span className="text-stone-gray text-body"><strong>Near 100% Graft Survival</strong> – Since grafts are transplanted immediately, they remain healthy and intact, leading to higher success rates.</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-olive-gold mr-2">✔</span>
-                  <span className="text-stone-gray"><strong>Maximum Density</strong> – More grafts survive compared to FUE/FUT, resulting in thicker, fuller hair.</span>
+                  <span className="text-olive-gold mr-2 text-body">✔</span>
+                  <span className="text-stone-gray text-body"><strong>Maximum Density</strong> – More grafts survive compared to FUE/FUT, resulting in thicker, fuller hair.</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-olive-gold mr-2">✔</span>
-                  <span className="text-stone-gray"><strong>Faster Procedure</strong> – Reduced time between extraction and implantation improves efficiency.</span>
+                  <span className="text-olive-gold mr-2 text-body">✔</span>
+                  <span className="text-stone-gray text-body"><strong>Faster Procedure</strong> – Reduced time between extraction and implantation improves efficiency.</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-olive-gold mr-2">✔</span>
-                  <span className="text-stone-gray"><strong>Minimal Scarring</strong> – No linear scars (unlike FUT), and the extraction sites heal almost invisibly.</span>
+                  <span className="text-olive-gold mr-2 text-body">✔</span>
+                  <span className="text-stone-gray text-body"><strong>Minimal Scarring</strong> – No linear scars (unlike FUT), and the extraction sites heal almost invisibly.</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-olive-gold mr-2">✔</span>
-                  <span className="text-stone-gray"><strong>Natural Results</strong> – Precise placement ensures a seamless, undetectable hairline.</span>
+                  <span className="text-olive-gold mr-2 text-body">✔</span>
+                  <span className="text-stone-gray text-body "><strong>Natural Results</strong> – Precise placement ensures a seamless, undetectable hairline.</span>
                 </li>
               </ul>
             )}
@@ -125,7 +125,7 @@ const FeatureCard = () => {
               className="flex items-center justify-between w-full text-left"
               onClick={() => toggleSection('candidates')}
             >
-              <h3 className="text-xl font-semibold text-forest-green">Who is a Good Candidate for DHT?</h3>
+              <h4 className="heading-h4 font-semibold text-forest-green">Who is a Good Candidate for DHT?</h4>
               {expandedSections.candidates ? (
                 <Minus className="text-olive-gold" size={24} />
               ) : (
@@ -134,23 +134,27 @@ const FeatureCard = () => {
             </button>
             
             {expandedSections.candidates && (
-              <ul className="list-disc list-inside space-y-1 text-stone-gray mt-3">
+              <span >
+              <ul className="list-disc list-inside space-y-1 text-stone-gray mt-3 text-body">
                 <li>Men and women with androgenetic alopecia (pattern baldness).</li>
                 <li>Those looking for high-density, permanent hair restoration.</li>
                 <li>Patients with stable donor areas (enough healthy hair follicles for extraction).</li>
                 <li>Individuals who want minimal downtime and faster recovery compared to older methods.</li>
               </ul>
+              </span>
             )}
           </div>
 
           {/* Recovery & Results (not collapsible) */}
           <div className="mb-6">
-            <h3 className="text-xl font-semibold text-forest-green mb-3">Recovery & Results</h3>
-            <ul className="list-disc list-inside space-y-1 text-stone-gray">
+            <h4 className="heading-3 font-semibold text-forest-green mb-3">Recovery & Results</h4>
+            <span>
+            <ul className="list-disc list-inside space-y-1 text-stone-gray text-body">
               <li><strong>Healing Time:</strong> 7-10 days for crusts to fall off.</li>
               <li><strong>Shedding Phase:</strong> Transplanted hairs may shed in 2-4 weeks (normal part of the process).</li>
               <li><strong>New Growth:</strong> Visible results appear in 3-4 months, with full density achieved in 8-12 months.</li>
             </ul>
+            </span>
           </div>
         </div>
       </div>

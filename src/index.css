@@ -2,6 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  /* Set default font for the entire document */
+  html {
+    @apply font-montserrat;
+  }
+  
+  /* Apply typography system */
+  h1 {
+    @apply text-h1 font-lora;
+  }
+  
+  .heading-h2 {
+    @apply  font-lora font-bold text-[1.5rem] leading-tight;
+    @apply sm:text-[1.75rem] md:text-[2rem] lg:text-[2.25rem] xl:text-[2.5rem];
+  }
+  
+  .heading-h3 {
+    @apply  font-lora font-bold text-[1.25rem] leading-snug;
+    @apply sm:text-[1.375rem] md:text-[1.5rem] lg:text-[1.75rem] xl:text-[2rem];
+  }
+  
+  .heading-h4 {
+    @apply font-lora font-bold text-[1rem] leading-normal;
+    @apply sm:text-[1rem] md:text-[1.125rem] lg:text-[1.25rem] xl:text-[1.5rem];
+  }
+  
+  /* Body text will automatically use Montserrat */
+  .text-body {
+    @apply text-[0.875rem];
+    @apply md:text-[1rem] lg:text-[1.125rem] xl:text-[1.25rem];
+  }
+  
+  /* Span elements */
+  span {
+    @apply text-span font-inter;
+  }
+}
+
 :root{
   --forest-green: #2F4F3A;
   --olive-gold: #A18A42;

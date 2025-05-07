@@ -9,23 +9,23 @@ const VideoTestimonials = () => {
 
   const videos = [
     {
-      id: 'youtube-id-1',
+      id: 'foPEAlHSgxk',
       title: 'Client Experience 1',
     },
     {
-      id: 'youtube-id-2',
+      id: 'AwMgnG8WLDg',
       title: 'Client Experience 2',
     },
     {
-      id: 'youtube-id-3',
+      id: 'zLK_4jYjfg8',
       title: 'Client Experience 3',
     },
     {
-      id: 'youtube-id-4',
+      id: 'KxkbqKWIKOU',
       title: 'Client Experience 4',
     },
     {
-      id: 'youtube-id-5',
+      id: 'Ra_SK2fBt0w',
       title: 'Client Experience 5',
     },
     // Add more videos as needed
@@ -68,8 +68,8 @@ const VideoTestimonials = () => {
 
   return (
     <div className='bg-ivory-white py-12' id='testimonials'>
-    <div className="relative max-w-7xl mx-auto px-4 py-12" >
-      <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 text-gray-800">Video Testimonials</h2>
+    <div className="relative max-w-7xl mx-auto px-4 py-12 lg:px-0" >
+      <h2 className="heading-h2 font-bold text-center mb-8 text-gray-800">Video Testimonials</h2>
       
       <div className="relative" ref={containerRef}>
         <div className="overflow-hidden">
@@ -97,7 +97,7 @@ const VideoTestimonials = () => {
                       className="w-full h-48 md:h-64 rounded-lg"
                     ></iframe>
                   </div>
-                  <h3 className="text-lg font-semibold mt-4 text-center">{video.title}</h3>
+                  <h3 className="text-h3 font-semibold mt-4 text-center">{video.title}</h3>
                 </div>
               </div>
             ))}

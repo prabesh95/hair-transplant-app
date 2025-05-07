@@ -68,7 +68,7 @@ const expertiseList=[
 
 const OurExpertise = () => {
   return (
-    <div className='mt-14 mb-12 px-4 mx-auto max-w-7xl'>
+    <div className='mt-14 mb-12 px-4 sm:px-6 lg:px-0 mx-auto max-w-7xl '>
     {/* header Section */}
     <div className='text-center mb-10 max-w-[600px] mx-auto my-8 p-4'>
       <h2 className='text-2xl md:text-3xl font-bold text-forest-green mt-8 p-4'>Our Expertise</h2>

@@ -54,14 +54,14 @@ const Causes = () => {
   ];
 
   return (
-    <div className='bg-soft-sage' id='causes'>
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 ">
+    <div className='bg-soft-sage ' id='causes'>
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-0 py-12 ">
       {/* Hero Section */}
       <section className="text-center my-8">
-        <h2 className="text-2xl md:text-3xl font-bold text-forest-green ">
+        <h2 className="text-h2 sm:text-[1.75rem] md:text-[2rem] lg:text-[2.25rem] xl:text-[2.5rem] font-bold text-forest-green ">
           Causes of Hair Loss
         </h2>
-        <p className="mt-1 mx-auto">
+        <p className="text-base  mt-1 mx-auto">
           Understanding the root causes is the first step toward effective treatment
         </p>
         <div className="w-20 h-1 bg-olive-gold mx-auto mt-4"></div>
@@ -70,9 +70,9 @@ const Causes = () => {
 
       {/* Main Causes */}
       <section className="mb-16">
-        <h2 className="text-xl font-bold text-forest-green mb-4">
+        <h3 className="text-h3 sm:text-[1.375rem] md:text-[1.5rem] lg:text-[1.75rem] xl:text-[2rem] font-bold text-forest-green mb-4">
           Primary Causes of Hair Thinning
-        </h2>
+        </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {causes.map((cause, index) => (
             <div key={`${cause}-${index}`} className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
@@ -81,9 +81,9 @@ const Causes = () => {
                   {cause.icon}
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-forest-green mb-2">{cause.title}</h3>
+                  <h4 className="text-h4 sm:text-[1rem] md:text-[1.125rem] lg:text-[1.25rem] xl:text-[1.5rem] font-semibold text-forest-green mb-2">{cause.title}</h4>
                   <p className="text-stone-gray mb-3">{cause.description}</p>
-                  <span className="text-sm bg-soft-sage/30 text-forest-green px-3 py-1 rounded-full">
+                  <span className="text-sm bg-dusty-rose text-ivory-white px-3 py-1 rounded-full">
                     {cause.percentage}
                   </span>
                 </div>
@@ -94,38 +94,38 @@ const Causes = () => {
       </section>
 
       {/* Diagnosis Section */}
-      <section className="mb-16 bg-soft-sage/20 rounded-xl p-8">
-        <h2 className="text-2xl font-bold text-forest-green mb-6">
+      <section className="mb-16 ">
+        <h3 className="text-h3 sm:text-[1.375rem] md:text-[1.5rem] lg:text-[1.75rem] xl:text-[2rem] font-bold text-forest-green mb-6">
           How We Diagnose Your Hair Loss
-        </h2>
+        </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
-            <p className="text-stone-gray mb-6">
+            <p className=" text-lg text-stone-gray mb-6">
               Our trichologists use advanced diagnostic tools to pinpoint your specific cause:
             </p>
             <ul className="space-y-3">
               <li className="flex items-start">
-                <ChevronRight className="text-olive-gold mr-2 mt-1 flex-shrink-0" size={18} />
-                <span className="text-stone-gray"><strong>Trichoscopy:</strong> 200x magnification of hair and scalp</span>
+                <ChevronRight className="text-olive-gold mr-2 mt-1 flex-shrink-0 text-body" size={18} />
+                <span className="text-stone-gray text-body"><strong>Trichoscopy:</strong> 200x magnification of hair and scalp</span>
               </li>
               <li className="flex items-start">
-                <ChevronRight className="text-olive-gold mr-2 mt-1 flex-shrink-0" size={18} />
-                <span className="text-stone-gray"><strong>Blood Tests:</strong> Check for hormonal/nutritional imbalances</span>
+                <ChevronRight className="text-body text-olive-gold mr-2 mt-1 flex-shrink-0" size={18} />
+                <span className="text-body text-stone-gray"><strong>Blood Tests:</strong> Check for hormonal/nutritional imbalances</span>
               </li>
               <li className="flex items-start">
-                <ChevronRight className="text-olive-gold mr-2 mt-1 flex-shrink-0" size={18} />
-                <span className="text-stone-gray"><strong>Pull Test:</strong> Measures active shedding severity</span>
+                <ChevronRight className="text-body text-olive-gold mr-2 mt-1 flex-shrink-0" size={18} />
+                <span className="text-body text-stone-gray"><strong>Pull Test:</strong> Measures active shedding severity</span>
               </li>
               <li className="flex items-start">
-                <ChevronRight className="text-olive-gold mr-2 mt-1 flex-shrink-0" size={18} />
-                <span className="text-stone-gray"><strong>Scalp Biopsy:</strong> For suspected autoimmune conditions</span>
+                <ChevronRight className="text-body text-olive-gold mr-2 mt-1 flex-shrink-0" size={18} />
+                <span className="text-body text-stone-gray"><strong>Scalp Biopsy:</strong> For suspected autoimmune conditions</span>
               </li>
             </ul>
           </div>
           <div className="bg-white p-6 rounded-lg shadow-sm">
-            <h3 className="text-xl font-semibold text-forest-green mb-4">
+            <h4 className="text-h4 sm:text-[1rem] md:text-[1.125rem] lg:text-[1.25rem] xl:text-[1.5rem] font-semibold text-forest-green mb-4">
               Prevention Tips
-            </h3>
+            </h4>
             <ul className="space-y-2 text-stone-gray">
               {preventionTips.map((tip, index) => (
                 <li key={`${tip}-${index}`} className="flex items-start">

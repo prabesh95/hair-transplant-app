@@ -42,8 +42,8 @@ const FAQ = () => {
   ];
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-12">
-      <h2 className="text-2xl font-bold text-forest-green mb-8 text-center">
+    <div className="max-w-7xl mx-auto px-4 lg:px-0 py-12 bg-muted-teal'">
+      <h2 className="heading-h2 text-forest-green mb-8 text-center">
         Frequently Asked Questions
       </h2>
 
@@ -57,9 +57,9 @@ const FAQ = () => {
               className={`w-full flex justify-between items-center p-5 text-left ${activeIndex === index ? 'bg-soft-sage/20' : 'bg-white'}`}
               onClick={() => toggleFAQ(index)}
             >
-              <h3 className="text-lg font-medium text-forest-green">
+              <h4 className="heading-4 text-forest-green">
                 {faq.question}
-              </h3>
+              </h4>
               {activeIndex === index ? (
                 <Minus className="text-olive-gold" size={20} />
               ) : (
@@ -69,7 +69,7 @@ const FAQ = () => {
 
             {activeIndex === index && (
               <div className="p-5 bg-white border-t border-gray-200">
-                <p className="text-stone-600">{faq.answer}</p>
+                <p className="text-stone-600 text-body">{faq.answer}</p>
               </div>
             )}
           </div>

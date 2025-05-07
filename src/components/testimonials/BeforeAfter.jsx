@@ -1,5 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import oneBefore from "../../assets/beforeAfter/oneBefore.png"
+import oneAfter from "../../assets/beforeAfter/oneAfter.png"
+import twoAfter from "../../assets/beforeAfter/twoAfter.png"
+import twoBefore from "../../assets/beforeAfter/twoBefore.png"
+import threeBefore from "../../assets/beforeAfter/threeBefore.png"
+import threeAfter from "../../assets/beforeAfter/threeAfter.png"
+import fourAfter from "../../assets/beforeAfter/fourAfter.png"
+import fourBefore from "../../assets/beforeAfter/fourBefore.png"
 
 const BeforeAfter = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -9,23 +17,23 @@ const BeforeAfter = () => {
 
   const images = [
     {
-      before: '/before-after/1-before.jpg',
-      after: '/before-after/1-after.jpg',
+      before: oneBefore,
+      after: oneAfter,
       name: 'Client 1',
     },
     {
-      before: '/before-after/2-before.jpg',
-      after: '/before-after/2-after.jpg',
+      before: twoBefore,
+      after: twoAfter,
       name: 'Client 2',
     },
     {
-      before: '/before-after/3-before.jpg',
-      after: '/before-after/3-after.jpg',
+      before: threeBefore,
+      after: threeAfter,
       name: 'Client 3',
     },
     {
-      before: '/before-after/4-before.jpg',
-      after: '/before-after/4-after.jpg',
+      before: fourBefore,
+      after: fourAfter,
       name: 'Client 4',
     },
     {
@@ -73,8 +81,8 @@ const BeforeAfter = () => {
 
   return (
     <div id='gallery' className='py-12'>
-    <div className="relative max-w-7xl mx-auto px-4 py-12" >
-      <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 text-gray-800">Before & After Results</h2>
+    <div className="relative max-w-7xl mx-auto px-4 py-12 lg:px-0" >
+      <h2 className="heading-h2 font-bold text-center mb-8 text-gray-800">Before & After Results</h2>
       
       <div className="relative" ref={containerRef}>
         <div className="overflow-hidden">
@@ -97,7 +105,7 @@ const BeforeAfter = () => {
                     <img 
                       src={image.before} 
                       alt={`Before ${image.name}`} 
-                      className="w-full h-48 md:h-64 object-cover rounded-lg mx-auto"
+                      className="w-full h-48 md:h-64 object-contain rounded-lg mx-auto"
                     />
                   </div>
                   <div className="text-center">
@@ -105,7 +113,7 @@ const BeforeAfter = () => {
                     <img 
                       src={image.after} 
                       alt={`After ${image.name}`} 
-                      className="w-full h-48 md:h-64 object-cover rounded-lg mx-auto"
+                      className="w-full h-48 md:h-64 object-contain rounded-lg mx-auto"
                     />
                   </div>
                   <p className="text-center pt-2 font-medium">{image.name}</p>

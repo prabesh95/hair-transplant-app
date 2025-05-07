@@ -150,22 +150,22 @@ const AlternatingCards = () => {
       Our repair methods:
       - Graft redistribution
       - Scar camouflage
-      - Beard-to-scalp transplants`,
+      - Beard to scalp transplants`,
       details: `We begin with a comprehensive evaluation of the previous work, assessing graft survival, scarring, and remaining donor supply. Solutions may include: extracting poorly placed grafts and re-implanting them properly, adding new grafts to improve density, or using SMP to soften harsh hairlines. For FUT scars, we can transplant directly into the scar or use FUE to harvest from within the scar tissue. Repair procedures often require multiple sessions spaced 9-12 months apart. The goal is to create natural-looking results while maximizing remaining donor potential.`,
       results: "Natural appearance restored | Scar improvement | Donor preservation"
     }
   ];
 
   return (
-    <div className="space-y-12 overflow-hidden">
+    <div className="space-y-12 overflow-hidden ">
       {procedures.map((procedure, index) => {
         const isEven = index % 2 === 0;
         const bgColor = isEven ? 'bg-soft-sage/20' : 'bg-ivory-white';
         
         return (
-          <div className='py-12 ' id={procedure.id}>
+          <div className='py-12 bg-soft-sage/20 ' id={procedure.id}>
           <div key={procedure.id}  className={`${bgColor} py-12  `}>
-            <div className="mx-auto max-w-[95vw] lg:max-w-7xl">
+            <div className="mx-auto max-w-[90vw] lg:max-w-7xl">
               <div className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8 items-start`}>
                 {/* Image Section */}
                 <div className="w-full lg:w-1/2 overflow-hidden">
@@ -178,13 +178,13 @@ const AlternatingCards = () => {
 
                 {/* Content Section */}
                 <div className="w-full lg:w-1/2">
-                  <h2 className="text-2xl md:text-3xl font-bold text-forest-green mb-4">
+                  <h3 className="heading-h3 font-bold text-forest-green mb-4">
                     {procedure.title}
-                  </h2>
-                  <pre className="text-lg text-olive-gold mb-4 whitespace-normal">
+                  </h3>
+                  <pre className="text-body text-olive-gold mb-4 whitespace-normal">
                     {procedure.summary}
                   </pre>
-                  <div className="prose prose-lg text-stone-700 mb-6">
+                  <div className="prose prose-lg text-stone-700 mb-6 text-body">
                     <p className="font-medium mb-3">Key Features:</p>
                     <div dangerouslySetInnerHTML={{ __html: procedure.overview.replace(/-/g, `<br> •`) }} />
                   </div>
@@ -193,12 +193,12 @@ const AlternatingCards = () => {
 
               {/* Additional Details Section */}
               <div className="mt-8 max-w-5xl mx-auto">
-                <div className="prose prose-lg text-stone-600">
+                <div className="prose prose-lg text-stone-600 text-body">
                   <p>{procedure.details}</p>
                 </div>
                 <div className="mt-6 p-4 bg-white rounded-lg border border-soft-sage">
-                  <p className="font-semibold text-forest-green">Expected Results:</p>
-                  <p className="text-stone-600">{procedure.results}</p>
+                  <h4 className="font-semibold text-muted-teal heading-h4">Expected Results:</h4>
+                  <p className="text-stone-600 text-body">{procedure.results}</p>
                 </div>
                 
               </div>

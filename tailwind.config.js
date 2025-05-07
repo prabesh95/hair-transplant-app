@@ -6,10 +6,15 @@ export default {
       'sm': '640px',
       'md': '768px',
       'lg': '1024px',
-      'xl': '1120px', // Custom breakpoint for mobile menu
+      'xl': '1150px', // Custom breakpoint for mobile menu
       '2xl': '1280px',
     },
     extend: {
+      fontFamily: {
+        montserrat: ['Montserrat', 'sans-serif'],
+        inter: ['Inter', 'sans-serif'],
+        lora: ['Lora', 'serif'],
+      },
       colors: {
         // Primary
         'forest-green': '#2F4F3A',
@@ -23,8 +28,10 @@ export default {
         'dusty-rose': '#D7A7A1'
       },
       fontSize: {
-        base: ['18px', { lineHeight: '1.5' }], // Default text size
-        lg: ['18px', { lineHeight: '1.5' }],   // Larger base size for big screens
+        // Mobile-first (default)
+        h1: ["1.75rem", { lineHeight: "1.2", fontWeight: "700" }],
+        
+        span: ["0.7rem", { lineHeight: "1.5" }],      
       },
     },
   },
