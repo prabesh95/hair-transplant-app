@@ -133,16 +133,16 @@ function Navbar() {
             : 'bg-ivory-white shadow-md'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-3 lg:px-0">
+         <div className="max-w-7xl mx-auto px-3 lg:px-0">
           <div className="flex justify-between h-20 items-center">
             <div className="flex-shrink-0">      
               <HashLink smooth to="/hair-loss#hero-1">
-                <img src={Logo} alt="logo" className='h-10 w-auto'/>
+                <img src={Logo} alt="logo" className='h-9 w-auto'/> {/* Reduced from h-10 */}
               </HashLink>
             </div>
 
-            {/* Desktop Menu */}
-            <div className="hidden xl:flex items-center space-x-8">
+            {/* Desktop Menu - Modified spacing and font size */}
+            <div className="hidden xl:flex items-center space-x-5"> {/* Reduced from space-x-8 */}
               {navItems.map((item) => (
                 <div key={item.path} className="relative group">
                   {item.dropdown ? (
@@ -150,10 +150,10 @@ function Navbar() {
                       <HashLink
                         smooth
                         to={`/${item.path}#${item.path}`}
-                        className="flex items-center gap-1 text-stone-gray hover:text-forest-green font-semibold text-lg"
+                        className="flex items-center gap-1 text-stone-gray hover:text-forest-green font-semibold text-[16px]" // Reduced from text-lg
                       >
                         {item.name}
-                        <ChevronDown size={18} />
+                        <ChevronDown size={16} /> {/* Reduced from size 18 */}
                       </HashLink>
 
                       <div className="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md py-1 z-10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-gray-100">
@@ -173,7 +173,7 @@ function Navbar() {
                     <HashLink
                       smooth
                       to={`/${item.path}#${item.path}`}
-                      className="flex items-center gap-1 text-stone-gray hover:text-forest-green font-semibold text-lg"
+                      className="flex items-center gap-1 text-stone-gray hover:text-forest-green font-semibold text-[16px]" // Reduced from text-lg
                     >
                       {item.name}
                     </HashLink>
@@ -184,13 +184,13 @@ function Navbar() {
               <HashLink 
                 smooth
                 to="/contacts#consultation-form" 
-                className="bg-olive-gold hover:bg-forest-green text-ivory-white px-6 py-2 rounded-lg transition-colors font-semibold text-lg"
+                className="bg-olive-gold hover:bg-forest-green text-ivory-white px-4 py-1.5 rounded-lg transition-colors font-semibold text-[16px]" // Reduced padding and font size
               >
                 Book a Consultation
               </HashLink>
             </div>
 
-            {/* Mobile Menu Button */}
+            {/* Mobile Menu Button remains the same */}
             <div className="xl:hidden flex items-center">
               <button
                 onClick={toggleMobileMenu}
@@ -205,68 +205,68 @@ function Navbar() {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="xl:hidden bg-ivory-white shadow-lg pb-4 fixed inset-x-0 top-20 bottom-0 overflow-y-auto">
-            <div className="h-full flex flex-col">
-              <div className="flex-1 overflow-y-auto">
-                {navItems.map((item) => (            
-                  <div key={item.path} className="px-4 pt-3">
-                    <div className="flex flex-col">
-                      {item.dropdown ? (
-                        <>
-                          <div
-                            className="flex justify-between items-center py-2 text-stone-gray hover:text-forest-green cursor-pointer"
-                            onClick={(e) => handleMobileNavClick(item, e)}
-                          >
-                            <span className="font-semibold text-lg">{item.name}</span>
-                            <ChevronDown 
-                              size={20}
-                              className={`transition-transform ${
-                                activeDropdown === item.path ? 'rotate-180' : ''
-                              }`}
-                            />
-                          </div>
+           <div className="xl:hidden bg-ivory-white shadow-lg pb-4 fixed inset-x-0 top-20 z-40 h-[calc(100vh-5rem)] overflow-y-auto">
+    <div className="h-full flex flex-col">
+      <div className="flex-1 overflow-y-auto">
+        {navItems.map((item) => (            
+          <div key={item.path} className="px-4 pt-3">
+            <div className="flex flex-col">
+              {item.dropdown ? (
+                <>
+                  <div
+                    className="flex justify-between items-center py-2 text-stone-gray hover:text-forest-green cursor-pointer"
+                    onClick={(e) => handleMobileNavClick(item, e)}
+                  >
+                    <span className="font-semibold text-lg">{item.name}</span>
+                    <ChevronDown 
+                      size={20}
+                      className={`transition-transform ${
+                        activeDropdown === item.path ? 'rotate-180' : ''
+                      }`}
+                    />
+                  </div>
 
-                          {activeDropdown === item.path && (
-                            <div className="pl-4">
-                              {item.dropdown.map((subItem) => (
-                                <HashLink
-                                  smooth
-                                  key={subItem.path}
-                                  to={`/${item.path}#${subItem.path}`}
-                                  className="block py-2 text-stone-gray hover:bg-soft-sage rounded px-2 font-medium text-base"
-                                  onClick={() => setIsOpen(false)}
-                                >
-                                  {subItem.name}
-                                </HashLink>
-                              ))}
-                            </div>
-                          )}
-                        </>
-                      ) : (
+                  {activeDropdown === item.path && (
+                    <div className="pl-4">
+                      {item.dropdown.map((subItem) => (
                         <HashLink
                           smooth
-                          to={`/${item.path}#${item.path}`}
-                          className="block py-2 text-stone-gray hover:text-forest-green font-semibold text-lg"
+                          key={subItem.path}
+                          to={`/${item.path}#${subItem.path}`}
+                          className="block py-2 text-stone-gray hover:bg-soft-sage rounded px-2 font-medium text-base"
                           onClick={() => setIsOpen(false)}
                         >
-                          {item.name}
+                          {subItem.name}
                         </HashLink>
-                      )}
+                      ))}
                     </div>
-                  </div>
-                ))}
-              </div>
-
-              <div className="px-4 py-4 sticky bottom-0 bg-ivory-white border-t border-gray-200">
-                <HashLink 
+                  )}
+                </>
+              ) : (
+                <HashLink
                   smooth
-                  to="/contacts#consultation-form"
-                  className="block w-full text-center bg-olive-gold hover:bg-forest-green text-ivory-white py-2 rounded-lg font-semibold text-lg"
+                  to={`/${item.path}#${item.path}`}
+                  className="block py-2 text-stone-gray hover:text-forest-green font-semibold text-lg"
                   onClick={() => setIsOpen(false)}
                 >
-                  Book a Consultation
+                  {item.name}
                 </HashLink>
-              </div>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="px-4 py-4 sticky bottom-0 bg-ivory-white border-t border-gray-200">
+        <HashLink 
+          smooth
+          to="/contacts#consultation-form"
+          className="block w-full text-center bg-olive-gold hover:bg-forest-green text-ivory-white py-2 rounded-lg font-semibold text-lg"
+          onClick={() => setIsOpen(false)}
+        >
+          Book a Consultation
+        </HashLink>
+      </div>
             </div>
           </div>
         )}
